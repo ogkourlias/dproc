@@ -1,0 +1,3 @@
+NameError in file /home/orfeas/Documents/dproc/h2/Snakefile, line 35:
+name 'SAMPLES' is not defined
+  File "/home/orfeas/Documents/dproc/h2/Snakefile", line 35, in <module>

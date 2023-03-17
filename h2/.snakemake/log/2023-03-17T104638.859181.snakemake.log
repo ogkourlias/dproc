@@ -1,0 +1,8 @@
+Building DAG of jobs...
+MissingInputException in rule bwa_map in file /home/orfeas/Documents/dproc/h2/Snakefile, line 1:
+Missing input files for rule bwa_map:
+    output: mapped_reads/A.bam
+    wildcards: sample=A
+    affected files:
+        data/genome.fa
+        data/samples/A.fastq

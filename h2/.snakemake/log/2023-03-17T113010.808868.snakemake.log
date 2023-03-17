@@ -1,0 +1,3 @@
+WildcardError in file /home/orfeas/Documents/dproc/h2/Snakefile, line 2:
+No values given for wildcard 'sample'.
+  File "/home/orfeas/Documents/dproc/h2/Snakefile", line 2, in <module>

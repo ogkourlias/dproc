@@ -1,0 +1,9 @@
+Building DAG of jobs...
+MissingInputException in rule quantify_genes in file /home/orfeas/Documents/dproc/h1/workflow/Snakefile, line 7:
+Missing input files for rule quantify_genes:
+    output: results/Sample1.txt
+    wildcards: sample=Sample1
+    affected files:
+        data/Sample1.R1.fastq.gz
+        genome.fa
+        data/Sample1.R2.fastq.gz

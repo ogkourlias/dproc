@@ -1,0 +1,46 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job        count    min threads    max threads
+-------  -------  -------------  -------------
+bwa_map        2              1              1
+total          2              1              1
+
+Select jobs to execute...
+
+[Fri Mar 17 10:56:02 2023]
+Job 0: executing bwa mem on the following data/genome.fa data/samples/A.fastq to generate the following mapped_reads/A.bam
+Reason: Missing output files: mapped_reads/A.bam
+
+
+[Fri Mar 17 10:56:02 2023]
+Job 1: executing bwa mem on the following data/genome.fa data/samples/B.fastq to generate the following mapped_reads/B.bam
+Reason: Missing output files: mapped_reads/B.bam
+
+[Fri Mar 17 10:56:02 2023]
+Error in rule bwa_map:
+    jobid: 0
+    input: data/genome.fa, data/samples/A.fastq
+    output: mapped_reads/A.bam
+    shell:
+        bwa mem data/genome.fa data/samples/A.fastq | samtools view -Sb - > mapped_reads/A.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job bwa_map since they might be corrupted:
+mapped_reads/A.bam
+[Fri Mar 17 10:56:02 2023]
+Error in rule bwa_map:
+    jobid: 1
+    input: data/genome.fa, data/samples/B.fastq
+    output: mapped_reads/B.bam
+    shell:
+        bwa mem data/genome.fa data/samples/B.fastq | samtools view -Sb - > mapped_reads/B.bam
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job bwa_map since they might be corrupted:
+mapped_reads/B.bam
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-03-17T105602.411917.snakemake.log
